@@ -4,10 +4,11 @@ import org.apache.commons.io.FilenameUtils;
 
 import java.util.logging.Logger;
 
+import static apachecommons.Constants.EXAMPLE_TXT_PATH;
+
 public class FileNameUtilsExample {
 
-        private static final String EXAMPLE_TXT_PATH =
-                "C:\\Users\\ajay7\\test.txt";
+
         private static final Logger logger = Logger.getLogger(FileNameUtilsExample.class.getName());
 
     public static void main(String[] args) {
