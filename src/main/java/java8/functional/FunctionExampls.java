@@ -8,9 +8,9 @@ import java.util.function.Function;
 
 public class FunctionExampls {
     static List<Employee> employeeList = Lists.newArrayList(
-            new Employee(123, "Ajay", "Garg"),
-            new Employee(231, "Neha", "Garg"),
-            new Employee(456, "Aayu", "Garg")
+            new Employee(123, "Ajay", "Garg", 0),
+            new Employee(231, "Neha", "Garg", 0),
+            new Employee(456, "Aayu", "Garg", 0)
     );
 
     static Function<Employee, String> employeeStringFunction = Employee::getName;
