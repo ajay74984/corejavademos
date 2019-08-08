@@ -1,13 +1,15 @@
 package java8.streams;
 
-import com.google.common.collect.*;
+import com.google.common.collect.Lists;
 import java8.Employee;
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static java8.streams.Person.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class StreamExamples {
@@ -252,6 +254,21 @@ public class StreamExamples {
         assertThat(collect.get(true)).hasSize(2);
         assertThat(collect.get(false)).hasSize(1);
     }
+
+    @Test
+    public void testGroupingBy() {
+        List<Employee> employeeList = Lists.newArrayList(
+                new Employee(456, "Ajay", "Garg", 100.00),
+                new Employee(131, "Ajay", "Garg1", 20000.00),
+                new Employee(856, "Aayu", "Garg2", 3000.00)
+        );
+        final Map<String, List<Employee>> collect = employeeList.stream()
+                .collect(Collectors
+                        .groupingBy(emp -> emp.getName()));
+        assertThat(collect.get("Ajay")).hasSize(2);
+        assertThat(collect.get("Aayu")).hasSize(1);
+    }
+
 
 
 }
