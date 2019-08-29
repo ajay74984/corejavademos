@@ -4,6 +4,11 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
 public class TryWithResourceImprovementExample {
+    /*
+    Deprecated is just for reference purpose here
+    These two parameters has been added here since Java 9 to provide more meta data information.
+     */
+    @Deprecated(since = "version", forRemoval = true)
     public static void main(String[] args) throws FileNotFoundException {
         FileOutputStream fileOutputStream = new FileOutputStream("test.txt");
         /*
