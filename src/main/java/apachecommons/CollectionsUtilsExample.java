@@ -27,7 +27,7 @@ public class CollectionsUtilsExample {
     @Test
     public void testTransform(){
         CollectionUtils.transform(emptyList, String::toLowerCase);
-        emptyList.stream().forEach(System.out::println);
+        emptyList.forEach(System.out::println);
         emptyList.stream()
                 .map(String::toUpperCase)
                 .forEach(System.out::println);

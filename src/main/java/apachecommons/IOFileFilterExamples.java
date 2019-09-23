@@ -30,6 +30,6 @@ public class IOFileFilterExamples {
         final Collection<File> files = FileUtils
                 .listFiles(file3, new SuffixFileFilter(".txt"),
                         new SuffixFileFilter("_java"));
-        files.stream().forEach(System.out::println);
+        files.forEach(System.out::println);
     }
 }

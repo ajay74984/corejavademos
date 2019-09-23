@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class ArrayUtilsExample {
 
-    public static final String[] STRINGS = {"A"};
+    private static final String[] STRINGS = {"A"};
 
     public static final String[] STRINGS_UNSORTED = {"D", "C", "A"};
 
@@ -18,8 +18,8 @@ public class ArrayUtilsExample {
     }
 
     @Test
-    public void testAddAll(){
-        final String[] strings = ArrayUtils.addAll(STRINGS, new String[]{"B"});
+    void testAddAll(){
+        final String[] strings = ArrayUtils.addAll(STRINGS, "B");
         assertThat(strings).contains("A","B");
     }
 
