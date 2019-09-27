@@ -2,6 +2,16 @@ package testing.junit;
 
 import org.junit.jupiter.api.*;
 
+import java.util.stream.Stream;
+
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assumptions.assumeFalse;
+import static org.junit.jupiter.api.Assumptions.assumeTrue;
+import static org.junit.jupiter.api.Assumptions.assumingThat;
+
 public class AllAnotationsTest {
 	
 	@BeforeAll
@@ -47,22 +57,11 @@ public class AllAnotationsTest {
 	}
 	
 	
-	/*
-	@AfterEach
-	void tearDown() {
-		System.out.println("@AfterEach - executed after each test method.");
-	}
-	
-	@AfterAll
-	static void done() {
-		System.out.println("@AfterAll - executed after all test methods.");
-	}
-	
 	@Test
 	void lambdaExpressions() {
-		Assertions.assertTrue(Stream.of(1, 2, 3)
-				                      .mapToInt(i -> i)
-				                      .sum() > 5, () -> "Sum should be greater than 5");
+		assertTrue(Stream.of(1, 2, 3)
+				           .mapToInt(i -> i)
+				           .sum() > 5, "Sum should be greater than 5");
 	}
 	
 	@Test
@@ -110,5 +109,5 @@ public class AllAnotationsTest {
 		assertThrows(IllegalArgumentException.class, () -> {
 			Integer.valueOf(str);
 		});
-	}*/
+	}
 }
