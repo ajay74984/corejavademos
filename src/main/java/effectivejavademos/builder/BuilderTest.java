@@ -1,6 +1,7 @@
 package effectivejavademos.builder;
 
 import effectivejavademos.builder.Employee.EmployeeBuilder;
+import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -10,7 +11,7 @@ public class BuilderTest {
 	
 	}
 	
-	@org.junit.Test
+	@Test
 	public void testBuilder() {
 		Employee employee = new EmployeeBuilder(123, "Ajay")
 				                    .withSalary(100)
