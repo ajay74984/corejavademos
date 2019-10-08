@@ -6,10 +6,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class MultisetExample {
+class MultisetExample {
 
     @Test
-    public void testMultiSetExample1(){
+    void testMultiSetExample1(){
 
         Multiset<String> bookStore = HashMultiset.create();
         bookStore.add("Learn");
@@ -21,7 +21,7 @@ public class MultisetExample {
         assertThat(bookStore).contains("Learn");
         assertThat(bookStore.count("Learn")).isEqualTo(2);
 
-        bookStore.entrySet().stream().forEach(entry ->
+        bookStore.entrySet().forEach(entry ->
                 System.out.println("Element= " + entry.getElement() + " Count= " + entry.getCount()));
 
 

@@ -22,6 +22,7 @@ public class ConnectionTest {
 		for (Constructor constructor : Connection.class.getDeclaredConstructors()) {
 			constructor.setAccessible(true);
 			instance2 = (Connection) constructor.newInstance();
+			
 			break;
 		}
 		assertThat(instance1).isNotEqualTo(instance2);

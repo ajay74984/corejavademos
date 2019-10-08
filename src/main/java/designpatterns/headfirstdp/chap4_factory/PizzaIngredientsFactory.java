@@ -7,18 +7,13 @@ import designpatterns.headfirstdp.chap4_factory.ingredients.Veggie;
 
 import java.util.List;
 
-public abstract class Pizza {
+public interface PizzaIngredientsFactory {
 	
-	private Dough dough;
-	private Sauce sauce;
-	private List<Veggie> veggies;
-	private Cheese cheese;
+	Dough createDough();
 	
-	abstract void prepare();
+	Sauce createSauce();
 	
-	abstract void bake();
+	Cheese createCheese();
 	
-	abstract void cut();
-	
-	abstract void box();
+	List<Veggie> createVeggies();
 }

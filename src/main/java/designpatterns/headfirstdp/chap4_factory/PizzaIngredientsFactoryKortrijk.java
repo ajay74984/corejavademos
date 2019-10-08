@@ -7,18 +7,24 @@ import designpatterns.headfirstdp.chap4_factory.ingredients.Veggie;
 
 import java.util.List;
 
-public abstract class Pizza {
+public class PizzaIngredientsFactoryKortrijk implements PizzaIngredientsFactory {
+	@Override
+	public Dough createDough() {
+		return null;
+	}
 	
-	private Dough dough;
-	private Sauce sauce;
-	private List<Veggie> veggies;
-	private Cheese cheese;
+	@Override
+	public Sauce createSauce() {
+		return null;
+	}
 	
-	abstract void prepare();
+	@Override
+	public Cheese createCheese() {
+		return null;
+	}
 	
-	abstract void bake();
-	
-	abstract void cut();
-	
-	abstract void box();
+	@Override
+	public List<Veggie> createVeggies() {
+		return null;
+	}
 }

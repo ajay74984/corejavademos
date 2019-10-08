@@ -7,7 +7,7 @@ public class GhentPizzaStore extends PizzaStore {
 		Pizza pizza = null;
 		
 		if (type.equals("Veggie")) {
-			pizza = new VeggiePizza();
+			pizza = new VeggiePizza(null);
 		} else if (type.equals("Greek")) {
 			pizza = new GreekPizza();
 		} else if (type.equals("NV")) {
