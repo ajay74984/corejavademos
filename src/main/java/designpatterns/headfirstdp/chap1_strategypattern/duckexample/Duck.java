@@ -2,9 +2,9 @@ package designpatterns.headfirstdp.chap1_strategypattern.duckexample;
 
 public abstract class Duck {
 	
-	FlyBehaviour flyBehaviour;
+	private FlyBehaviour flyBehaviour;
 	
-	QuackBehaviour quackBehaviour;
+	private QuackBehaviour quackBehaviour;
 	
 	public Duck() {
 	

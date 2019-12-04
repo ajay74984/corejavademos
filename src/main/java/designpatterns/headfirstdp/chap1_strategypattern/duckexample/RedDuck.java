@@ -7,8 +7,4 @@ public class RedDuck extends Duck {
 		System.out.println("Red Duck");
 	}
 	
-	public RedDuck() {
-		flyBehaviour = new FlyingHigh();
-		quackBehaviour = new Sqweak();
-	}
 }

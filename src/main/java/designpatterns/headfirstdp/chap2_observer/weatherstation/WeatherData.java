@@ -1,5 +1,6 @@
 package designpatterns.headfirstdp.chap2_observer.weatherstation;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class WeatherData implements Subject {
@@ -9,12 +10,9 @@ public class WeatherData implements Subject {
 	private float humidity;
 	private float presssure;
 	
-	public WeatherData(List<Observer> observerList) {
-		this.observerList = observerList;
-	}
 	
 	public WeatherData() {
-	
+		observerList = new ArrayList<>();
 	}
 	
 	@Override
@@ -23,11 +21,11 @@ public class WeatherData implements Subject {
 	}
 	
 	@Override
-	public void removeObserver(Observer observer) {
-		observerList.remove(observer);
+	public void removeObserver(Observer observer1) {
+		observerList.removeIf(observer -> observerList.contains(observer1));
 	}
 	
-	public void measurementsChanged() {
+	private void measurementsChanged() {
 		notifyObservers();
 	}
 	
@@ -43,6 +41,6 @@ public class WeatherData implements Subject {
 		this.temp = temp;
 		this.humidity = humidity;
 		this.presssure = presssure;
-		measurementsChanged();
+		measurementsChanged(); //TODO : real life will be a listener?
 	}
 }
