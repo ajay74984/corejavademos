@@ -1,30 +1,19 @@
 package designpatterns.headfirstdp.chap4_factory;
 
-import designpatterns.headfirstdp.chap4_factory.ingredients.Cheese;
-import designpatterns.headfirstdp.chap4_factory.ingredients.Dough;
-import designpatterns.headfirstdp.chap4_factory.ingredients.Sauce;
-import designpatterns.headfirstdp.chap4_factory.ingredients.Veggie;
-
-import java.util.List;
-
 public class PizzaIngredientsFactoryKortrijk implements PizzaIngredientsFactory {
 	@Override
-	public Dough createDough() {
-		return null;
+	public void createDough() {
 	}
 	
 	@Override
-	public Sauce createSauce() {
-		return null;
+	public void createSauce() {
 	}
 	
 	@Override
-	public Cheese createCheese() {
-		return null;
+	public void createCheese() {
 	}
 	
 	@Override
-	public List<Veggie> createVeggies() {
-		return null;
+	public void createVeggies() {
 	}
 }
